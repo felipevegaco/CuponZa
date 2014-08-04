@@ -1,0 +1,59 @@
+.initial { 
+  background: url(../img/bg_login.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logo-cuponza {
+	max-width:90%;
+    height:auto;
+    position: relative;
+    display:block;
+    margin:80px auto;
+}
+
+.logo-cuponza img {
+	 max-width:100% !important;
+    height:auto;
+    display:block;
+}
+
+.button.button-login {
+	opacity: 0.75;
+	color: #fff;
+	width: 90%;
+	margin: 20px auto;
+	display: block;
+}
+
+.button.activated {
+	border-color: transparent;
+	background-color: #333;
+}
+
+.btn-sign-up {
+	border-color: #04A543;
+	background-color: rgb(4,165,67);
+}
+
+.btn-fb {
+	border-color: #5872A7;
+	background-color: rgb(88,114,167);
+}
+
+.btn-tw {
+	border-color: #55ACEE;
+	background-color: rgb(85,172,238);
+}
+
+.btn-explore {
+	border-color: #FFFFFF;
+	color: rgb(4,165,67);
+	width:35%;
+	display: block;
+	margin: 0 auto;
+	line-height: 37px;
+	min-height: 40px;
+}
