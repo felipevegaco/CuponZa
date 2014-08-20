@@ -26,8 +26,8 @@ angular.module('cuponza.controllers', [])
 
 		$http({
 			method: 'POST', 
-			url : 'http://192.168.1.59:8080/cuponza/user/add', 
-			headers: {"Content-type" : 'application/x-www-form-urlencoded'}, 
+			url : 'http://172.20.16.144:8082/cuponza/user/add', 
+			//headers: {"Content-type" : 'application/x-www-form-urlencoded'}, 
 			data: oFormData }
 		).
 		//$http.post('http://192.168.1.59:8080/cuponza/user/add', oFormData).
@@ -37,5 +37,21 @@ angular.module('cuponza.controllers', [])
 			error(function(data){
 				console.log(data);
 		})
+	}
+})
+.controller('FacebookCtrl', function($scope, $http) {
+	openFB.init({appId: '1446743368937107'});
+	$scope.fbLogin = function(){
+		openFB.login(		
+        function(response) {
+            if (response.status === 'connected') {
+                console.log('Facebook login succeeded');
+                $scope.closeLogin();
+            } else {
+                alert('Facebook login failed');
+            }
+        },
+        {scope: 'email,publish_actions'});
+		
 	}
 });

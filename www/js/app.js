@@ -38,7 +38,11 @@ angular.module('cuponza', ['ionic', 'cuponza.controllers'])
       controller: 'SignUpCtrl'
     })
 
-    
+    .state('facebook', {
+      url: "/cuponza/facebook",
+      templateUrl: "templates/facebook.html",
+      controller: 'FacebookCtrl'
+    })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/cuponza');
