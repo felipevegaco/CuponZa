@@ -2,7 +2,7 @@
   <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/cuponza">Back</a>
   <h1 class="title">Facebook</h1>
 </div>
-<script src="lib/openfb.js"></script>
+
 
 
 <ion-content>
@@ -11,6 +11,17 @@
       
       <button class="button button-block button-positive" ng-click="fbLogin()">
         FB login
+      </button>
+
+       <button class="button button-block button-positive" ng-click="fbLogout()">
+        FB Logout
+      </button>
+
+       <button class="button button-block button-positive" ng-click="fbGetuserDetails()">
+        FB details
+      </button>
+      <button class="button button-block button-positive" ng-click="fbLoginStatus()">
+        FB login status
       </button>
     </div>
   </form>

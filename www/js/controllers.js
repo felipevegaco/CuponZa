@@ -46,12 +46,37 @@ angular.module('cuponza.controllers', [])
         function(response) {
             if (response.status === 'connected') {
                 console.log('Facebook login succeeded');
-                $scope.closeLogin();
+                //$scope.closeLogin();
             } else {
                 alert('Facebook login failed');
             }
         },
         {scope: 'email,publish_actions'});
 		
+	}
+
+	$scope.fbLogout = function(){
+		openFB.logout();
+	}
+	$scope.fbLoginStatus = function(){
+		openFB.getLoginStatus(function(loginStatus){alert(loginStatus.status)});
+	}
+
+	$scope.fbGetuserDetails = function(){
+		var config = {
+			method : 'GET',
+			path :   '/me',
+			success :  printPersonalDetails,
+			error   :  showFBError
+		};
+		openFB.api(config);
+	}
+
+	function printPersonalDetails(o){
+		console.log(o);
+	}
+
+	function showFBError(o){
+		console.log(o);
 	}
 });
