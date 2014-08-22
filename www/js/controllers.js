@@ -79,4 +79,39 @@ angular.module('cuponza.controllers', [])
 	function showFBError(o){
 		console.log(o);
 	}
-});
+}).
+ controller('MapCtrl', function($scope, $http){
+ 	var options = {
+ 		enableHighAccuracy: true,
+  		timeout: 5000,
+  		maximumAge: 0
+ 	};
+ 	//:TODO get rid of this false map object
+ 	$scope.map = {
+			    center: {
+			        latitude:  11,
+			        longitude: 11
+			    		},
+			    zoom: 1
+				};
+
+ 	function getLocationSuccess(pos){
+ 		
+ 		$scope.position = pos;
+ 		console.log($scope.position);
+ 		$scope.map = {
+			    center: {
+			        latitude:  pos.coords.latitude,
+			        longitude: pos.coords.longitude
+			    		},
+			    zoom: 17
+				}
+				console.log($scope.map);
+
+ 	}
+ 	function getLocationError(err){
+ 		console.log(err);
+ 	}
+ 	navigator.geolocation.getCurrentPosition(getLocationSuccess,getLocationError,options);
+ 	
+ });
