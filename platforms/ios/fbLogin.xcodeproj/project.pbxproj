@@ -42,6 +42,7 @@
 		FA55C71615CE42AA82D41235 /* UIWebViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 19633584FA5B4BC181FCD488 /* UIWebViewExtension.m */; };
 		77A930382A984528A55EB684 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D493A6B2E59642A28ACDEE4B /* CDVLogger.m */; };
 		C4C0BCB517004053BCFAB2B8 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B96BD6C0934B69B0B14BB9 /* CDVDevice.m */; };
+		BE52304B2DDF478FB43BD028 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C85C93182E834D7BADBC87AA /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		2A29826527724625A89FE7A3 /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		00B96BD6C0934B69B0B14BB9 /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		3655A7BDDD0C487F9EFAE2C7 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C85C93182E834D7BADBC87AA /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		E8924DE0DA0842D3A07201CE /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +245,8 @@
 				2A29826527724625A89FE7A3 /* CDVLogger.h */,
 				00B96BD6C0934B69B0B14BB9 /* CDVDevice.m */,
 				3655A7BDDD0C487F9EFAE2C7 /* CDVDevice.h */,
+				C85C93182E834D7BADBC87AA /* CDVInAppBrowser.m */,
+				E8924DE0DA0842D3A07201CE /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = "fbLogin/Plugins";
@@ -440,6 +445,7 @@
 				FA55C71615CE42AA82D41235 /* UIWebViewExtension.m in Sources */,
 				77A930382A984528A55EB684 /* CDVLogger.m in Sources */,
 				C4C0BCB517004053BCFAB2B8 /* CDVDevice.m in Sources */,
+				BE52304B2DDF478FB43BD028 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

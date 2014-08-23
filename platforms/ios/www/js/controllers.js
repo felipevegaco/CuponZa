@@ -80,6 +80,11 @@ angular.module('cuponza.controllers', [])
 		console.log(o);
 	}
 }).
+.controller('TwitterCtrl', function($scope, $http) {
+	$scope.twLogin = function() {
+		alert('hello twitter');
+	}
+}).
  controller('MapCtrl', function($scope, $http){
  	var options = {
  		enableHighAccuracy: true,
