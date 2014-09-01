@@ -41,16 +41,16 @@
     },
     "installed_plugins": {
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.fblogin567561"
+            "PACKAGE_NAME": "com.datasol.cuponza"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.ionicframework.fblogin567561"
+            "PACKAGE_NAME": "com.datasol.cuponza"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.ionicframework.fblogin567561"
+            "PACKAGE_NAME": "com.datasol.cuponza"
         },
         "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.ionicframework.fblogin567561"
+            "PACKAGE_NAME": "com.datasol.cuponza"
         }
     },
     "dependent_plugins": {}
