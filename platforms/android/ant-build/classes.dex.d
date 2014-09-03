@@ -1,0 +1,27 @@
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes.dex : \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\datasol\cuponza\BuildConfig.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\datasol\cuponza\CuponZa.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\datasol\cuponza\R$attr.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\datasol\cuponza\R$drawable.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\datasol\cuponza\R$string.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\datasol\cuponza\R$xml.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\datasol\cuponza\R.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$1.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$2.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\device\Device.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$1.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$2.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$3.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$4$1.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$4.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$5$1.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$5$2.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$5$3.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$5$4.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$5.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser$InAppBrowserClient.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowser.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppBrowserDialog.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\classes\org\apache\cordova\inappbrowser\InAppChromeClient.class \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\ant-build\dexedLibs\classes-a6e1668814cda5e041563f33842c5618.jar \
