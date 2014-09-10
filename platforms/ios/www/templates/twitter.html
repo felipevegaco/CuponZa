@@ -1,0 +1,31 @@
+<div class="bar bar-header">
+    <a class="button icon-left ion-chevron-left button-clear button-dark" href="#/cuponza">Back</a>
+    <h1 class="title">Sign up with Twitter</h1>
+</div>
+<ion-content style="margin-top:45px;" has-header="true" padding="true">
+    <button class="button button-block button-positive" ng-click="doLogin()">
+    Twitter login
+    </button>
+    <button class="button button-block button-positive" ng-click="doLogout()">
+    Twitter Logout
+    </button>
+    <button class="button button-block button-positive" ng-click="doTweet()">
+    Tweet
+    </button>
+    <button class="button button-block button-positive" ng-click="doStatus()">
+    Twitter status
+    </button>
+    <div ng-repeat="item in items" class="list card">
+        <div class="item item-avatar">
+            <img ng-src="{{ item.user.profile_image_url }}"/>
+            <h2>{{item.user.name}}</h2>
+            <p>{{item.created_at | date:'MMM d, y h:mma'}}</p>
+        </div>
+        <div class="item item-body">
+            <p>{{item.text}}</p>
+
+            <img ng-if="item.picture" ng-src="{{ item.picture }}"/>
+
+        </div>
+    </div>
+</ion-content>
