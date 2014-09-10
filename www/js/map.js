@@ -1,18 +1,74 @@
 angular.module('map', [])
 
-.controller('MapCtrl', function($scope, $ionicLoading) {
+.controller('MapCtrl', function($scope, $ionicLoading, $http) {
   var map;
+
+  $scope.loading = $ionicLoading.show({
+    content: 'Loading first time...',
+    showBackdrop: true
+  });
+
   function initialize() {
     var oPos = { latitude : 0, longitude : 0 };
+
+    var optionsGeolocation = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(initMap);
+        navigator.geolocation.getCurrentPosition(initMap, errorGettingCurrentPos, optionsGeolocation);
     } else {
        alert("Geolocation is not supported by this browser.");
     }
 
+    function errorGettingCurrentPos () {
+      alert('You gotta turn on your GPS');
+    }
+
     function initMap(position) {
+        console.log('started initMap');
+
         oPos.latitude = position.coords.latitude;
         oPos.longitude = position.coords.longitude;
+
+        $http({
+            method: 'POST',
+            url: 'http://172.20.16.144:8082/cuponza/cupons/byLocation',
+            data: { 'longitude' : oPos.latitude, 'latitude' : oPos.longitude }
+          }).
+          success(function(data) {
+              //TODO move the code from error handler function
+              console.log("coool man");
+          }).
+          error(function(data) {
+              var aCupons = [
+                {
+                  cuponDescription : "Santafe descuento grande",
+                  cuponTitle : "Burger King 2 x 1",
+                  cuponValue : 15,
+                  latitude : 6.19791,
+                  longitude : -75.5774,
+                  pictureURL : "/img/bk_09384.jpg"
+                },
+                {
+                  cuponDescription : "Oviedo CC - Descuento bueno",
+                  cuponTitle : "Mimos Helados",
+                  cuponValue : 200,
+                  latitude : 6.1988,
+                  longitude : -75.5742,
+                  pictureURL : "/img/bk_09384.jpg"
+                }
+              ];
+
+              console.log(aCupons);
+
+              $ionicLoading.hide();
+
+              drawCuponsOnMap(aCupons);
+          });
+
         var mapOptions = {
         center: new google.maps.LatLng(oPos.latitude, oPos.longitude),
           zoom: 17,
@@ -27,6 +83,21 @@ angular.module('map', [])
       e.preventDefault();
       return false;
     });
+  }
+
+  function drawCuponsOnMap(aCupons) {
+    var myLatlng = new google.maps.LatLng(aCupons[0].latitude,aCupons[0].longitude);
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: aCupons[0].cuponTitle
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      alert(marker.title);
+    });
+
+
   }
 
   initialize();
