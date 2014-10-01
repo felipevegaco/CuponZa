@@ -71,6 +71,7 @@ C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\a
 C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\assets\www\img\logo_cuponza.png \
 C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\assets\www\js\app.js \
 C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\assets\www\js\controllers.js \
+C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\assets\www\js\map.js \
 C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\assets\www\js\services.js \
 C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\assets\www\lib\angular-google-maps.js \
 C:\Users\unaor\Documents\personal\cordova\cuponza-UI\CuponZa\platforms\android\assets\www\lib\ionic \
