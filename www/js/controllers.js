@@ -32,8 +32,9 @@ angular.module('cuponza.controllers', [])
 
             $http({
                     method: 'POST',
-                    url: 'http://172.20.16.144:8082/cuponza/user/add',
-                    data: oFormData
+                    url: 'http://54.187.118.20:8080/cuponza/user/add',
+                    data: oFormData,
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }).
             success(function(data) {
                 console.log(JSON.parse(data));
