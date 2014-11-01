@@ -32,41 +32,25 @@ angular.module('map', [])
 
         oPos.latitude = position.coords.latitude;
         oPos.longitude = position.coords.longitude;
+        var transform = function(data){
+          return $.param(data);
+        }
 
         $http({
             method: 'POST',
-            url: 'http://172.20.16.144:8082/cuponza/cupons/byLocation',
-            data: { 'longitude' : oPos.latitude, 'latitude' : oPos.longitude }
+            url: 'http://54.187.118.20:8080/cuponza/cupons/byLocation',
+            data : 'longitude='+oPos.longitude+'&latitude='+oPos.latitude,
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
           }).
           success(function(data) {
               //TODO move the code from error handler function
-              console.log("coool man");
+             
+              var aCupons = data;
+              $ionicLoading.hide();
+              drawCuponsOnMap(aCupons);
           }).
           error(function(data) {
-              var aCupons = [
-                {
-                  cuponDescription : "Santafe descuento grande",
-                  cuponTitle : "Burger King 2 x 1",
-                  cuponValue : 15,
-                  latitude : 6.19791,
-                  longitude : -75.5774,
-                  pictureURL : "/img/bk_09384.jpg"
-                },
-                {
-                  cuponDescription : "Oviedo CC - Descuento bueno",
-                  cuponTitle : "Mimos Helados",
-                  cuponValue : 200,
-                  latitude : 6.1988,
-                  longitude : -75.5742,
-                  pictureURL : "/img/bk_09384.jpg"
-                }
-              ];
-
-              console.log(aCupons);
-
-              $ionicLoading.hide();
-
-              drawCuponsOnMap(aCupons);
+              alert('There was a problem while obtaining the coupons data - /cupons/byLocation');
           });
 
         var mapOptions = {
@@ -86,18 +70,31 @@ angular.module('map', [])
   }
 
   function drawCuponsOnMap(aCupons) {
-    var myLatlng = new google.maps.LatLng(aCupons[0].latitude,aCupons[0].longitude);
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: aCupons[0].cuponTitle
+    for(var i=0; i<aCupons.length; i++) {
+      var marker = null;
+      var myLatlng = new google.maps.LatLng(aCupons[i].latidude,aCupons[i].longitude);
+      var title = aCupons[i].cuponTitle;
+      console.log(title);
+      marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: title,
+          content : { 'description' : aCupons[i].cuponDescription, 'imgURL' : aCupons[i].pictureURL, 'quantity' : aCupons[i].cuponValue }
+      });
+      addListenerToMarker(marker);
+      //console.log('latitude : '+aCupons[i].latidude+', longitude : ' + aCupons[i].longitude);
+    }
+
+  }
+
+  function addListenerToMarker(oMarker) {
+    google.maps.event.addListener(oMarker, 'click', function() {
+        openDetailMarker(oMarker);
     });
+  }
 
-    google.maps.event.addListener(marker, 'click', function() {
-      alert(marker.title);
-    });
-
-
+  function openDetailMarker(oMarker) {
+      
   }
 
   initialize();
